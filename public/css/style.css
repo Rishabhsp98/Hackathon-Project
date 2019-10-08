@@ -25,8 +25,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
-    color: white;
+    background-color:#ffd9b3;
+    color:black;
     text-align: center;
  }
 
@@ -248,3 +248,4 @@ body, input, button {
     min-height: 0;
   }
 }
+
