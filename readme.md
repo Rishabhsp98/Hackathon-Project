@@ -1,3 +1,3 @@
-this project is being done by DEEPAK MALIK AND RISHABH.
+This project is being done by DEEPAK malik AND RISHABH sharma.
 MALIK:-backend nodejs and mongodb
-rishabh:-front end express-handlebars,bootstrap,responsive web designing.
+Rishabh:-front end express-handlebars,bootstrap,responsive web designing.
