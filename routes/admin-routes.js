@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 var dc = require('../server')
 const router = require('express').Router()
-const user = require('../models/users')
+
 router.get('/' , (req,res)=> {
           user.find()
           .then(users => {

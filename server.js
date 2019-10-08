@@ -4,6 +4,7 @@ const keys = require('./config/keys_dev')
 const exphbs = require('express-handlebars')
 const adminRoutes = require('./routes/admin-routes')
 const app = express()
+const bodyParser = require('body-parser')
 const path = require('path')
 const SERVER_PORT = process.env.PORT || 5000
 
@@ -38,6 +39,8 @@ MongoClient.connect(url, function(err, client) {
 
 
 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.engine('handlebars' , exphbs({
     defaultLayout:'main'
@@ -52,12 +55,6 @@ app.get('/welcome' , (req,res)=> {
           res.render('addition/dashboard')
 })
 
-app.get('/admin/getdata' , (req,res)=> {
-        res.render('addition/users' , {
-           data:dc
-        })
-})
-
 app.get('/userlogin' , (req,res)=> {
          res.render('addition/login')
 })
@@ -65,7 +62,25 @@ app.get('/userlogin' , (req,res)=> {
 app.get('/usersignup' , (req,res)=> {
         res.render('addition/signup')
 })
+app.get('/adminlogin' , (req,res)=> {
+       res.render('addition/loginadmin')
+})
 
+app.get('/team' , (req,res)=> {
+       res.render('addition/team')
+})
+
+app.post('/adminlogin' , (req,res)=> {
+        console.log(req.body)
+         if(req.body.username == 'deepak' && req.body.password == 'deepak123'){
+          res.render('addition/users' , {
+            data:dc
+          })
+         }else {
+           res.send('login failure')
+         }
+        
+})
 app.listen(SERVER_PORT, (req,res) => {
      console.log('server started at port:' + SERVER_PORT)
 })
