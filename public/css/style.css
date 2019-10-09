@@ -22,10 +22,11 @@
   }
   .footer {
     position: fixed;
+    padding-top: 12px;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:#ffd9b3;
+    background-color:#e6f2ff;
     color:black;
     text-align: center;
  }
@@ -35,14 +36,13 @@
 .button {
   display: inline-block;
   border: 0;
-  background: #197278;
+  background:#99ccff;
   padding: 15px 30px;
-  color: white;
+  color:#FFF;
   font-family: "Lato", "Arial", "Helvetica", sans-serif;
   letter-spacing: 1.4px;
   font-size: 18px;
   border-radius: 6px;
-  text-shadow: 0 1px 2px #283D3B;
   animation: jiggle 2s infinite ease-in;
   
 }
@@ -247,5 +247,32 @@ body, input, button {
     font-size: 0.7em;
     min-height: 0;
   }
+}
+.card
+{
+  padding: 5px;
+}
+.navbar-left
+{
+  text-align: left;
+}
+
+.text-white
+{
+  color:#fff;
+}
+.bit
+{
+  padding-left: 8px;
+}
+.team
+{
+  color: #fff;
+}
+
+.padblack
+{
+  color: #000;
+  padding-left: 5px ;
 }
 
